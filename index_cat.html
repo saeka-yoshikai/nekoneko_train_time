@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ねこねこ電車時刻表</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="cat-ears">
+        <div class="ear">
+          <!-- <img src="天使の恰好をした猫さん.png" class="ear-decoration" alt="天使猫" /> -->
+        </div>
+        <div class="ear">
+          <!-- <img src="急ぐ猫さん.png" class="ear-decoration" alt="急ぐ猫" /> -->
+        </div>
+      </div>
+
+      <div class="paw-print paw-1">
+        <img src="footprints (1).gif" class="footprint-gif" alt="足跡" />
+      </div>
+      <div class="paw-print paw-2">
+        <!-- <img src="ホットドリンクと猫さん.png" class="corner-cat" alt="ホットドリンク猫" /> -->
+      </div>
+      <div class="paw-print paw-3">
+        <!-- <img src="放送ねこさん.png" class="corner-cat" alt="放送猫" /> -->
+      </div>
+
+      <div class="header">
+        <button class="settings-btn" id="settingsBtn">
+          <span class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+        <h1>
+          <img src="ホットドリンクと猫さん.png" class="cat-face" alt="猫さん" /> 
+          ねこねこ電車時刻表</h1>
+      </div>
+
+      <div class="direction-selector">
+        <label>方面を選択にゃ：</label>
+        <div class="direction-buttons">
+          <button class="direction-btn active" data-direction="岡崎">
+            岡崎方面
+          </button>
+          <button class="direction-btn" data-direction="高蔵寺">
+            高蔵寺方面
+          </button>
+        </div>
+      </div>
+
+      <div class="train-selector">
+        <label>目標の電車を選ぶにゃ（任意）：</label>
+        <select id="targetTrain">
+          <option value="">自動で次の電車を表示</option>
+        </select>
+      </div>
+
+      <div class="countdown-section">
+        <div class="countdown-card" id="nextTrainCard">
+          <div class="countdown-label">次の電車</div>
+          <div class="train-time" id="nextTrainTime">--:--</div>
+          <div class="countdown" id="nextCountdown">--:--</div>
+          <div
+            class="cat-animation"
+            id="nextCatAnimation"
+            style="display: none"
+          >
+            <img src="スーパーマンな猫さん.png" class="cat-animation-img" alt="太鼓猫" />
+          </div>
+          <div class="alert" id="nextAlert" style="display: none">
+            もうすぐ発車にゃ！
+          </div>
+        </div>
+
+        <div class="countdown-card" id="targetTrainCard" style="display: none">
+          <div class="countdown-label">選択した電車</div>
+          <div class="train-time" id="targetTrainTime">--:--</div>
+          <div class="countdown" id="targetCountdown">--:--</div>
+          <div
+            class="cat-animation"
+            id="targetCatAnimation"
+            style="display: none"
+          >
+            <img src="スーパーマンな猫さん.png" class="cat-animation-img" alt="スーパーマン猫" />
+          </div>
+          <div class="alert" id="targetAlert" style="display: none">
+            もうすぐ発車にゃ！
+          </div>
+        </div>
+      </div>
+
+      <div class="time-table">
+        <h3>🚃本日の時刻表 🚃</h3>
+        <div class="time-list" id="timeTableList"></div>
+      </div>
+    </div>
+
+    <!-- Settings Modal -->
+    <div class="settings-modal" id="settingsModal">
+      <div class="settings-content">
+        <div class="settings-header">
+          <h3>設定にゃ 🐱</h3>
+          <button class="close-btn" id="closeSettings">&times;</button>
+        </div>
+        <div class="settings-body">
+          <div class="setting-item">
+            <label>何分前から通知するにゃ？</label>
+            <input type="number" id="notifyBefore" value="5" min="1" max="60" />
+          </div>
+          <!-- <div class="setting-item">
+            <label>音量設定にゃ</label>
+            <input type="range" id="volumeControl" min="0" max="100" value="50" />
+            <span class="volume-display">50%</span>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
