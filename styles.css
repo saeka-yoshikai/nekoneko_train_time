@@ -98,8 +98,8 @@ h1 {
 
 
 .cat-face {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   object-fit: contain;
   border-radius: 50%;
 /*   animation: catWiggle 2s ease-in-out infinite; */
