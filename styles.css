@@ -85,7 +85,7 @@ body {
 h1 {
   text-align: center;
   color: #ff6b9d;
-  font-size: 24px;
+  font-size: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -102,7 +102,7 @@ h1 {
   height: 40px;
   object-fit: contain;
   border-radius: 50%;
-  animation: catWiggle 2s ease-in-out infinite;
+/*   animation: catWiggle 2s ease-in-out infinite; */
   will-change: transform;
 }
 
