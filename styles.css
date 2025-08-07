@@ -85,17 +85,21 @@ body {
 h1 {
   text-align: center;
   color: #ff6b9d;
-  font-size: 28px;
+  font-size: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 8px;
+  flex-wrap: nowrap; /* 折り返しを防ぐ */
+  margin: 0;
+  padding: 0 10px;
   margin: 0;
 }
 
+
 .cat-face {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   object-fit: contain;
   border-radius: 50%;
   animation: catWiggle 2s ease-in-out infinite;
